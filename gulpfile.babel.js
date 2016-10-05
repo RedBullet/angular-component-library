@@ -23,19 +23,17 @@ const paths = {
   docs: './docs/app/*.js',
   scripts: [`${root}/app/**/*.js`, `!${root}/app/**/*.spec.js`],
   tests: `${root}/app/**/*.spec.js`,
-  styles: `${root}/sass/*.scss`,
+  styles: `${root}/styles/*.scss`,
   templates: `${root}/app/**/*.html`,
   modules: [
     'angular/angular.js',
     'angular-ui-router/release/angular-ui-router.js',
-    'firebase/firebase.js',
-    'angularfire/dist/angularfire.js',
     'angular-loading-bar/build/loading-bar.min.js'
   ],
   static: [
     `${root}/index.html`,
     `${root}/fonts/**/*`,
-    `${root}/img/**/*`
+    `${root}/images/**/*`
   ]
 };
 
@@ -68,7 +66,7 @@ gulp.task('modules', ['templates'], () => {
 gulp.task('styles', () => {
   return gulp.src(paths.styles)
     .pipe(sass({outputStyle: 'compressed'}))
-    .pipe(gulp.dest(paths.dist + 'css/'));
+    .pipe(gulp.dest(paths.dist + 'styles/'));
 });
 
 gulp.task('scripts', ['modules'], () => {
@@ -105,14 +103,6 @@ gulp.task('watch', ['serve', 'scripts'], () => {
   gulp.watch(paths.styles, ['styles']);
 });
 
-gulp.task('firebase', ['styles', 'scripts'], cb => {
-  return exec('firebase deploy', function (err, stdout, stderr) {
-    console.log(stdout);
-    console.log(stderr);
-    cb(err);
-  });
-});
-
 gulp.task('default', [
   'copy',
   'styles',
@@ -122,8 +112,7 @@ gulp.task('default', [
 
 gulp.task('production', [
   'copy',
-  'scripts',
-  'firebase'
+  'scripts'
 ]);
 
 gulp.task('copyDocs', () => {
