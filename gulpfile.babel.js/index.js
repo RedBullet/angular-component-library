@@ -1,8 +1,6 @@
 import gulp from 'gulp';
 
 import './tasks/clean';
-import './tasks/templates';
-import './tasks/modules';
 import './tasks/styles';
 import './tasks/scripts';
 import './tasks/serve';
