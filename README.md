@@ -25,5 +25,3 @@ A [Contacts Manager](https://contacts-manager-e486f.firebaseapp.com) application
 To run this app, follow the [instructions here](https://github.com/toddmotto/ultimate-angular-master-seed). Basically `npm install` and `npm start`. Run tests with `npm test`. Have fun!
 
 Yes, I'm going to convert this to ES6, and maybe TypeScript. You're welcome to PR the transition (open an issue first) but please don't change application functionality or anything else :)
-
-![Contacts Manager](https://cloud.githubusercontent.com/assets/1655968/17981372/5907ffb0-6afb-11e6-9bb4-7e223b56e0d4.gif)
