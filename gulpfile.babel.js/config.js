@@ -1,5 +1,6 @@
 import child from 'child_process';
 import yargs from 'yargs';
+import path from 'path';
 
 const exec = child.exec;
 const argv = yargs.argv;
@@ -27,6 +28,17 @@ const config = {
   argv,
   root,
   paths,
+};
+
+config.scssLint = {
+  src: config.paths.styles,
+  options: {
+    config: path.join(__dirname, '../.scss-lint.yml'),
+  },
+};
+
+config.eslint = {
+  src: config.paths.scripts,
 };
 
 export default config;

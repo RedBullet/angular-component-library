@@ -8,6 +8,8 @@ import './tasks/scripts';
 import './tasks/serve';
 import './tasks/copy';
 import './tasks/watch';
+import './tasks/eslint';
+import './tasks/scss-lint';
 
 gulp.task('default', [
   'copy',
@@ -20,3 +22,5 @@ gulp.task('production', [
   'copy',
   'scripts'
 ]);
+
+gulp.task('lint', ['eslint', 'scss-lint']);

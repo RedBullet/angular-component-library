@@ -1,5 +1,5 @@
 function AppController($state) {
-  var ctrl = this;
+  var vm = this;
 }
 
 /**
