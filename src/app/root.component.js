@@ -3,7 +3,7 @@ import angular from 'angular';
 const RootComponent = {
   template: `
     <div class="app">
-      <h2>Test</h2>
+      <nav-bar></nav-bar>
       <div ui-view></div>
     </div>
   `
