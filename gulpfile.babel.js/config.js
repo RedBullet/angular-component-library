@@ -8,14 +8,10 @@ const root = './src/';
 const paths = {
   dist: './dist/',
   scripts: [`${root}/app/**/*.js`, `!${root}/app/**/*.spec.js`],
+  app: [`${root}/app/root.module.js`],
   tests: `${root}/app/**/*.spec.js`,
   styles: `${root}/styles/*.scss`,
   templates: `${root}/app/**/*.html`,
-  modules: [
-    'angular/angular.js',
-    'angular-ui-router/release/angular-ui-router.js',
-    'angular-loading-bar/build/loading-bar.min.js'
-  ],
   static: [
     `${root}/index.html`,
     `${root}/fonts/**/*`,

@@ -20,7 +20,7 @@ gulp.task('default', [
 
 gulp.task('production', [
   'copy',
-  'scripts'
+  'scripts:prod'
 ]);
 
 gulp.task('lint', ['eslint', 'scss-lint']);

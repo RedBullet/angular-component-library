@@ -1,7 +1,12 @@
-var root = {
-  templateUrl: './root.html'
+import angular from 'angular';
+
+const RootComponent = {
+  template: `
+    <div class="app">
+      <h2>Test</h2>
+      <div ui-view></div>
+    </div>
+  `
 };
 
-angular
-  .module('root')
-  .component('root', root);
+export default RootComponent;
