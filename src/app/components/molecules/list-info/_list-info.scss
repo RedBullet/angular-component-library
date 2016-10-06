@@ -1,0 +1,23 @@
+.list-info {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    display: flex;
+    width: 100%;
+  }
+
+  &__label {
+    flex-grow: 1;
+    padding: 1em;
+    width: 50%;
+  }
+
+  &__value {
+    flex-grow: 1;
+    padding: 1em;
+    text-align: right;
+    width: 50%;
+  }
+}
