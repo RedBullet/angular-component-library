@@ -1,5 +1,6 @@
 .alert {
-  border: .2em solid rgba(0, 0, 0, .5);
+  border: .2em solid currentColor;
+  color: rgba(0, 0, 0, .5);
   padding: 1em;
 
   &__title {
@@ -10,5 +11,13 @@
   &__content {
     margin: 0;
     padding: 0;
+  }
+
+  &--info {
+    color: rgba(0, 0, 100, .5);
+  }
+
+  &--warning {
+    color: rgba(100, 100, 0, .5);
   }
 }
