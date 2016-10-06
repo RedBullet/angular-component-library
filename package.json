@@ -11,7 +11,8 @@
     "precommit": "npm run lint",
     "commitmsg": "validate-commit-msg",
     "postmerge": "npm install",
-    "postrewrite": "npm install"
+    "postrewrite": "npm install",
+    "prepush": "npm run test"
   },
   "license": "MIT",
   "repository": "https://github.com/toddmotto/angular-1-5-components-app",
@@ -19,9 +20,7 @@
     "angular": "^1.5.8",
     "angular-loading-bar": "^0.9.0",
     "angular-messages": "^1.5.8",
-    "angular-ui-router": "1.0.0-beta.2",
-    "angularfire": "^2.0.2",
-    "firebase": "3.3.0"
+    "angular-ui-router": "1.0.0-beta.2"
   },
   "devDependencies": {
     "angular-mocks": "^1.5.8",
