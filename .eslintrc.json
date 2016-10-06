@@ -17,6 +17,7 @@
     "arrow-body-style": [2, "always"],
     "import/no-unresolved": 0,
     "angular/module-setter": 0,
-    "angular/di": [2, "array"]
+    "angular/di": [2, "array"],
+    "angular/no-service-method": 0
   }
 }

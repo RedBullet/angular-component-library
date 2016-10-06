@@ -11,6 +11,7 @@ import sourcemaps from 'gulp-sourcemaps';
 import eventStream from 'event-stream';
 import config from '../config';
 import envify from 'loose-envify/custom';
+import ngAnnotate from 'gulp-ng-annotate';
 
 const scripts = config.paths.app;
 export const bundlers = scripts.map(script => {
@@ -38,6 +39,7 @@ export function scriptsStream(bundlerArr, dev = false, shouldThrow = true) {
       })
       .pipe(source(bundler.script))
       .pipe(buffer())
+      .pipe(ngAnnotate())
       .pipe(gulpIf(dev, sourcemaps.init({ loadMaps: true })))
       .pipe(gulpIf(!dev, uglify()))
       .pipe(gulpIf(dev, sourcemaps.write('.')))

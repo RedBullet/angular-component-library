@@ -8,7 +8,7 @@ const root = './src/';
 const paths = {
   dist: './dist/',
   scripts: [`${root}/app/**/*.js`, `!${root}/app/**/*.spec.js`],
-  app: [`${root}/app/root.module.js`],
+  app: [`${root}/app/app.js`],
   tests: `${root}/app/**/*.spec.js`,
   styles: [`${root}/styles/**/*.scss`,`${root}/app/components/**/*.scss`],
   static: [
