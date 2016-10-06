@@ -1,4 +1,4 @@
-const RootComponent = {
+const AppComponent = {
   template: `
     <div class="app">
       <div ui-view></div>
@@ -6,4 +6,4 @@ const RootComponent = {
   `
 };
 
-export default RootComponent;
+export default AppComponent;

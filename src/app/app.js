@@ -1,17 +1,15 @@
 import angular from 'angular';
 
-import Common from './common';
 import Components from './components';
-import RootComponent from './root.component';
+import AppComponent from './app.component';
 import Styleguide from './styleguide';
 
 const root = angular
   .module('root', [
-    Common,
     Components,
     Styleguide,
   ])
-  .component('root', RootComponent)
+  .component('root', AppComponent)
   .name;
 
 export default root;
