@@ -15,14 +15,14 @@ const Styleguide = angular
   ])
   .component('styleguide', StyleguideComponent)
   .service('StyleguideService', StyleguideService)
-  .config(/*@ngInject*/ ($stateProvider, $urlRouterProvider) => {
+  .config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
     $stateProvider
       .state('styleguide', {
         url: '/styleguide',
         component: 'styleguide'
       });
     $urlRouterProvider.otherwise('/');
-  })
+  }])
   .name;
 
 export default Styleguide;

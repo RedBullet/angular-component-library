@@ -1,3 +1,5 @@
+import Components from '../components';
+
 class StyleguideService {
   getComponentTypes() {
     return [

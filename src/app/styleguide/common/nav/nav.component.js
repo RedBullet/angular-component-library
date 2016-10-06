@@ -1,3 +1,5 @@
+import NavController from './nav.controller';
+
 const NavComponent = {
   bindings: {
     componentTypes: '<',
