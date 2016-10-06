@@ -1,17 +1,10 @@
 class StyleguideController {
-  constructor() {
-    this.components = [
-      {
-        name: 'Test 1',
-      },
-      {
-        name: 'Test 2',
-      },
-      {
-        name: 'Test 3',
-      },
-    ];
+  constructor(StyleguideService) {
+    this.componentTypes = StyleguideService.getComponentTypes();
+    this.components = StyleguideService.getComponents();
   }
 };
+
+StyleguideController.$inject = ['StyleguideService'];
 
 export default StyleguideController;

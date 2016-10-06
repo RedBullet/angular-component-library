@@ -4,7 +4,7 @@ const StyleguideComponent = {
   controller: StyleguideController,
   template: `
     <header>
-      <sg-nav></sg-nav>
+      <sg-nav component-types=$ctrl.componentTypes></sg-nav>
     </header>
 
     <main>
