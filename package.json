@@ -5,7 +5,7 @@
   "description": "Contacts manager app for Ultimate AngularJS",
   "scripts": {
     "start": "gulp",
-    "test": "karma start",
+    "test": "karma start --single-run",
     "deploy": "gulp production --deploy",
     "lint": "gulp lint",
     "precommit": "npm run lint",
