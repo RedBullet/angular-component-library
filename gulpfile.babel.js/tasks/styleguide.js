@@ -49,7 +49,7 @@ function createTemplateFromMarkdown(src, component, type) {
     createDirIfNotExist(dir);
     fs.writeFileSync(`${dir}/${templateSrc}`, html);
 
-    return templateSrc;
+    return `docs/templates/${templateSrc}`;
   }
 
   return undefined;
@@ -77,6 +77,4 @@ gulp.task('styleguide', () => {
   const data = folders.map(mapTypes);
 
   fs.writeFileSync(`${dir}/components.json`, JSON.stringify(data, null, 2)); // eslint-disable-line angular/json-functions
-
-  // console.log(data[0].components);
 });
