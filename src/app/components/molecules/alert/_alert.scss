@@ -4,7 +4,7 @@ $yellow: rgba(100, 100, 0, .5);
 
 .alert {
   border: .2em solid currentColor;
-  color: ;
+  color: $grey;
   padding: 1em;
 
   &__title {
