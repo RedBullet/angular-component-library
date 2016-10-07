@@ -1,1 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
 @import 'variables';
+
+@import 'base/**/*';
+
+@import '../app/**/*';

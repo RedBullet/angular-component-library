@@ -1,0 +1,14 @@
+.panel {
+  border: .2em solid rgba(0, 0, 0, .5);
+  margin-bottom: 5vw;
+
+  &__header {
+    background: rgba(0, 0, 0, .5);
+    padding: 1em;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+  }
+}

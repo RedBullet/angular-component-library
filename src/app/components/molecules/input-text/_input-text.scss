@@ -1,0 +1,25 @@
+.input-text {
+  padding: 1em;
+
+  &__inner {
+
+  }
+
+  &__label {
+
+  }
+
+  &__input-wrap {
+
+  }
+
+  &__input {
+    appearance: none;
+    -webkit-appearance: none;
+    border: .2em solid rgba(0, 0, 0, .5);
+    display: block;
+    max-width: 100%;
+    padding: .5em;
+    width: 100%;
+  }
+}

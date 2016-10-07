@@ -7,7 +7,6 @@ class StyleguideController {
 
     $http.get('docs/components.json')
       .success((data) => {
-        console.log(data);
         ctrl.data = data;
       });
   }

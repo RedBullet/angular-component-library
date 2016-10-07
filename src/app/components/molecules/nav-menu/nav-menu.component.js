@@ -1,6 +1,4 @@
-import controller from './nav-menu.controller';
-
-const NavMenuController = {
+const NavMenuComponent = {
   bindings: {
     name: '@'
   },
@@ -15,4 +13,4 @@ const NavMenuController = {
   `,
 };
 
-export default NavMenuController;
+export default NavMenuComponent;

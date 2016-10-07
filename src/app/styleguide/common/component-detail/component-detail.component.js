@@ -4,8 +4,8 @@ const ComponentDetailComponent = {
     docs: '@',
   },
   template: `
-    <h2>{{$ctrl.name}}</h2>
-    <h3>{{$ctrl.docs}}</h3>
+    <h3>{{$ctrl.name}}</h3>
+    <div>{{$ctrl.docs}}</div>
     <div ng-include=$ctrl.docs></div>
   `
 };
