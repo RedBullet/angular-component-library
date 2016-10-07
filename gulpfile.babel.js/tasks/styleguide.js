@@ -55,18 +55,27 @@ function createTemplateFromMarkdown(src, component, type) {
   return undefined;
 }
 
-function createDirIfNotExist(dir) {
-  if (!fs.statSync(dir).isDirectory()) {
-    fs.mkdirSync(dir);
+function createDirIfNotExist(path) {
+  if (!dirExists(path)) {
+    fs.mkdirSync(path);
+  }
+}
+
+function dirExists(path) {
+  try {
+    return fs.statSync(path).isDirectory();
+  } catch (err) {
+    return false;
   }
 }
 
 gulp.task('styleguide', () => {
+  const dir = `${config.paths.dist}/docs`;
+  createDirIfNotExist(dir);
+
   const folders = getFolders(config.paths.components);
   const data = folders.map(mapTypes);
-  const dir = `${config.paths.dist}/docs`;
 
-  createDirIfNotExist(dir);
   fs.writeFileSync(`${dir}/components.json`, JSON.stringify(data, null, 2)); // eslint-disable-line angular/json-functions
 
   // console.log(data[0].components);

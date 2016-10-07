@@ -1,4 +1,5 @@
 import gulp from 'gulp';
+import runSequence from 'run-sequence';
 
 import './tasks/clean';
 import './tasks/styles';
@@ -10,16 +11,12 @@ import './tasks/eslint';
 import './tasks/scss-lint';
 import './tasks/styleguide';
 
-gulp.task('default', [
-  'copy',
-  'styles',
-  'serve',
-  'watch'
-]);
+gulp.task('default', (callback) => {
+  runSequence('copy', ['styleguide', 'styles', 'serve', 'watch'], callback);
+});
 
-gulp.task('production', [
-  'copy',
-  'scripts:prod'
-]);
+gulp.task('production', (callback) => {
+  runSequence('copy', ['scripts:prod'], callback);
+});
 
 gulp.task('lint', ['eslint', 'scss-lint']);

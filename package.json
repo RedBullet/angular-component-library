@@ -63,6 +63,7 @@
     "markdown": "^0.5.0",
     "marked": "^0.3.6",
     "path": "^0.12.7",
+    "run-sequence": "^1.2.2",
     "underscore.string": "^3.3.4",
     "validate-commit-message": "^3.0.1",
     "vinyl-buffer": "^1.0.0",
