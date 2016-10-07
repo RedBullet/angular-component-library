@@ -4,7 +4,7 @@ import path from 'path';
 
 const exec = child.exec;
 const argv = yargs.argv;
-const root = './src/';
+const root = './src';
 const paths = {
   dist: './dist/',
   scripts: [`${root}/app/**/*.js`, `!${root}/app/**/*.spec.js`],
@@ -16,7 +16,8 @@ const paths = {
     `${root}/index.html`,
     `${root}/fonts/**/*`,
     `${root}/images/**/*`
-  ]
+  ],
+  components: `${root}/app/components`
 };
 
 const config = {
@@ -35,6 +36,12 @@ config.scssLint = {
 
 config.eslint = {
   src: config.paths.scripts,
+};
+
+config.styleguide = {
+  components: {
+    src: config.paths.components,
+  }
 };
 
 export default config;

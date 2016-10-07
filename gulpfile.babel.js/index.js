@@ -8,6 +8,7 @@ import './tasks/copy';
 import './tasks/watch';
 import './tasks/eslint';
 import './tasks/scss-lint';
+import './tasks/styleguide';
 
 gulp.task('default', [
   'copy',
