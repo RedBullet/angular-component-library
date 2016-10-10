@@ -3,6 +3,7 @@ const ComponentDetailComponent = {
     name: '@',
     docs: '@',
     properties: '<',
+    type: '@',
   },
   template: `
     <section class="sg-component-detail">
