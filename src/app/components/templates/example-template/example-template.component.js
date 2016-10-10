@@ -1,5 +1,6 @@
 const ExampleTemplate = {
   template: `
+    <nav-bar items="[{url: '#', title: 'Nav menu item'}, {url: '#', title: 'Nav menu item'}, {url: '#', title: 'Nav menu item'}]"></nav-bar>
     <hero title="Page title" subtitle="Page subtitle goes here probably a strapline"></hero>
     <page>
       <panel title="Panel title">
