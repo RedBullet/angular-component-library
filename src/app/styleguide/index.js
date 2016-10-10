@@ -5,6 +5,7 @@ import StyleguideService from './styleguide.service';
 import Nav from './common/nav';
 import ComponentList from './common/component-list';
 import ComponentDetail from './common/component-detail';
+import Properties from './common/properties';
 
 const Styleguide = angular
   .module('styleguide', [
@@ -12,6 +13,7 @@ const Styleguide = angular
     Nav,
     ComponentList,
     ComponentDetail,
+    Properties,
   ])
   .component('styleguide', StyleguideComponent)
   .service('StyleguideService', StyleguideService)

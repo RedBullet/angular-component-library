@@ -25,11 +25,27 @@ function mapTypes(type) {
 
 function mapComponents(component, type) {
   const name = s(component).capitalize().value();
+  const path = `${config.paths.components}/${type}/${component}`;
 
   return {
     name: name,
-    docs: createTemplateFromMarkdown(`${config.paths.components}/${type}/${component}/Readme.md`, component, type),
+    docs: createTemplateFromMarkdown(`${path}/Readme.md`, component, type),
+    schema: getSchema(`${path}/${component}.schema.json`),
   };
+}
+
+function getSchema(src) {
+  let file;
+  let json;
+
+  try {
+    file = fs.readFileSync(src, 'utf8');
+    json = JSON.parse(file); // eslint-disable-line angular/json-functions
+  } catch (err) {
+    //
+  }
+
+  return (json) ? json : undefined;
 }
 
 function createTemplateFromMarkdown(src, component, type) {
