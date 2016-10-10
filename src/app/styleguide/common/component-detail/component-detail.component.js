@@ -2,7 +2,7 @@ const ComponentDetailComponent = {
   bindings: {
     name: '@',
     docs: '@',
-    properties: '<',
+    schema: '<',
     type: '@',
   },
   template: `
@@ -12,8 +12,8 @@ const ComponentDetailComponent = {
         <h1 class="sg-component-detail__title">{{$ctrl.name}}</h1>
       </header>
       <div class="sg-component-detail__docs" ng-include=$ctrl.docs ng-if="$ctrl.docs"></div>
-      <div class="sg-component-detail__properties" ng-if="$ctrl.properties">
-        <sg-properties properties=$ctrl.properties></sg-properties>
+      <div class="sg-component-detail__properties" ng-if="$ctrl.schema">
+        <sg-properties properties=$ctrl.schema.properties required=$ctrl.schema.required></sg-properties>
       </div>
     </section>
   `

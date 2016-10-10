@@ -1,16 +1,8 @@
 .input-text {
   padding: 1em;
 
-  &__inner {
-
-  }
-
-  &__label {
-
-  }
-
-  &__input-wrap {
-
+  &__error {
+    clear: both;
   }
 
   &__input {
@@ -21,6 +13,24 @@
     max-width: 100%;
     padding: .5em;
     width: 100%;
+  }
+
+  @media screen and (min-width: 50em) {
+    &__inner {
+      overflow: hidden;
+    }
+
+    &__label {
+      border: .2em solid transparent;
+      float: left;
+      padding: .5em;
+      width: 50%;
+    }
+
+    &__input-wrap {
+      float: right;
+      width: 50%;
+    }
   }
 
   &--error {

@@ -8,7 +8,8 @@
         "info",
         "warning",
         "error"
-      ]
+      ],
+      "description": "One of: info, warning, error"
     },
     "title": {
       "type": "string"

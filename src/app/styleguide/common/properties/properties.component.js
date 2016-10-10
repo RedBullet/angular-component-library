@@ -1,6 +1,7 @@
 const PropertiesComponent = {
   bindings: {
     properties: '<',
+    required: '<',
   },
   template: `
     <section class="sg-properties">
@@ -15,8 +16,8 @@ const PropertiesComponent = {
         <tr class="sg-properties__property" ng-repeat="(key, property) in $ctrl.properties">
           <td class="sg-properties__property__name">{{key}}</td>
           <td class="sg-properties__property__type">{{property.type}}</td>
-          <td class="sg-properties__property__required" ng-class="{'sg-properties__property__required--optional': !property.required, 'sg-properties__property__required--required': property.required}">
-            <div ng-if="!property.required">
+          <td class="sg-properties__property__required" ng-class="{'sg-properties__property__required--optional': $ctrl.required.indexOf(key) < 0, 'sg-properties__property__required--required': $ctrl.required.indexOf(key) > -1}">
+            <div ng-if="$ctrl.required.indexOf(key) < 0">
               <i class="icon icon-tick"></i>
               <span>Optional</span>
             </div>

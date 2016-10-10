@@ -1,7 +1,5 @@
-# Example heading
-
-Some text and stuff.
+<nav-menu items="[{url: '#', title: 'Nav menu item'}, {url: '#', title: 'Nav menu item'}, {url: '#', title: 'Nav menu item'}]"></nav-menu>
 
 ```
-  <logo name="Red Bullet"></logo>
+<nav-menu items="[{url: '#', title: 'Nav menu item'}, {url: '#', title: 'Nav menu item'}, {url: '#', title: 'Nav menu item'}]"></nav-menu>
 ```

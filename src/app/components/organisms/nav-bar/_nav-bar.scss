@@ -1,0 +1,13 @@
+.nav-bar {
+  overflow: hidden;
+
+  @media screen and (min-width: 50em) {
+    &__logo {
+      float: left;
+    }
+
+    &__menu {
+      float: right;
+    }
+  }
+}
