@@ -1,0 +1,113 @@
+.sg-properties {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-family: $sg-properties-font-family;
+  width: 100%;
+
+  th {
+    color: $sg-properties-th-color;
+    font-family: $sg-properties-th-font-family;
+    font-size: .8em;
+    font-weight: $heading-font-weight;
+    padding: $spacing-vertical $spacing-horizontal;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  &__property {
+    &__required {
+      &--optional {
+        color: $sg-properties-optional-color;
+      }
+    }
+  }
+
+  @media screen and (max-width: map-get($bp, 'md')) {
+    display: block;
+
+    thead {
+      display: none;
+    }
+
+    tbody {
+      display: block;
+    }
+
+    tr {
+      background: $sg-properties-background;
+      border: $border-width $border-style $sg-properties-border-color;
+      border-left-width: $border-width-lg;
+      color: $sg-properties-color;
+      display: block;
+      margin-bottom: $spacing-vertical;
+      overflow: hidden;
+      padding: $spacing-vertical $spacing-horizontal;
+    }
+
+    &__property {
+      &__name {
+        border: 0;
+        float: left;
+        font-weight: 600;
+        width: 60%;
+      }
+
+      &__type {
+        border: 0;
+        float: left;
+        font-weight: 600;
+        opacity: .5;
+        width: 60%;
+      }
+
+      &__required {
+        border: 0;
+        display: inline-block;
+        text-align: right;
+        width: 39%;
+
+        .icon {
+          display: none;
+        }
+      }
+
+      &__description {
+        clear: both;
+        display: block;
+        padding-top: $spacing-vertical;
+
+        &:empty {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: map-get($bp, 'md')) {
+    td {
+      font-size: .8em;
+      padding: $spacing-vertical $spacing-horizontal;
+    }
+
+    tbody tr:nth-child(odd) {
+      background: $sg-properties-background-odd;
+      color: $sg-properties-color-odd;
+    }
+
+    tbody tr:nth-child(even) {
+      background: $sg-properties-background-even;
+      color: $sg-properties-color-even;
+    }
+
+    &__property {
+      &__required {
+        text-align: left;
+        text-indent: 2em;
+
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}

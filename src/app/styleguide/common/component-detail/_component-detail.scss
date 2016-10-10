@@ -1,0 +1,33 @@
+.sg-component-detail {
+  &__header {
+    background: $sg-page-header-background;
+    padding: $spacing-vertical-root $spacing-horizontal-root $spacing-vertical-root / 2;
+  }
+
+  &__subtitle {
+    color: $sg-page-header-sub-heading-color;
+    font-family: $heading-font-family;
+    font-size: $sg-page-header-sub-heading-font-size;
+    font-weight: $heading-font-weight;
+    line-height: $heading-line-height;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    color: $sg-page-header-heading-color;
+    font-family: $heading-font-family;
+    font-size: $sg-page-header-heading-font-size;
+    font-weight: $heading-font-weight;
+    line-height: $heading-line-height;
+    margin: 0;
+    padding: 0;
+    text-indent: -.075em;
+    text-transform: capitalize;
+  }
+
+  &__docs {
+    padding: $spacing-vertical-root / 2 $spacing-horizontal-root;
+  }
+}

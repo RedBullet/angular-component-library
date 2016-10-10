@@ -1,0 +1,13 @@
+.sg-styleguide--isolated {
+  margin: 0 (-$spacing-horizontal-root / 2);
+}
+
+@media (min-width: map-get($bp, 'md')) {
+  .sg-styleguide {
+    margin-left: $sg-menu-width;
+
+    &--isolated {
+      margin-left: (-$spacing-horizontal-root / 2);
+    }
+  }
+}

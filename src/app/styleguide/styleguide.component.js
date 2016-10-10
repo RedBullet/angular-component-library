@@ -3,10 +3,11 @@ import StyleguideController from './styleguide.controller';
 const StyleguideComponent = {
   controller: StyleguideController,
   template: `
-    <main>
+    <sg-header types=$ctrl.data></sg-header>
+
+    <main role="main" class="sg-styleguide">
       <div ng-repeat="type in $ctrl.data">
-        <h2>{{type.type}}</h2>
-        <sg-component-list components=type.components></sg-component-list>
+        <sg-component-list components=type.components type=type.type></sg-component-list>
       </div>
     </main>
   `

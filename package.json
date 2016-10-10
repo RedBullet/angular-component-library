@@ -63,6 +63,7 @@
     "lodash": "^4.16.2",
     "loose-envify": "^1.2.0",
     "marked": "^0.3.6",
+    "normalize.css": "^5.0.0",
     "path": "^0.12.7",
     "run-sequence": "^1.2.2",
     "underscore.string": "^3.3.4",

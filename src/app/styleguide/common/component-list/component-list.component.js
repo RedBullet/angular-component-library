@@ -1,11 +1,12 @@
 const ComponentListComponent = {
   bindings: {
     components: '<',
+    type: '<',
   },
   template: `
-    <div ng-repeat="component in $ctrl.components">
-      <sg-component-detail name="{{component.name}}" docs="{{component.docs}}" properties=component.schema.properties></sg-component-detail>
-    </div>
+    <section ng-repeat="component in $ctrl.components" class="sg-component-list">
+      <sg-component-detail name="{{component.name}}" docs="{{component.docs}}" type="{{$ctrl.type}}" properties=component.schema.properties></sg-component-detail>
+    </section>
   `
 };
 

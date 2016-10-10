@@ -1,1 +1,19 @@
-@import 'variables';
+@import 'node_modules/normalize.css/normalize';
+
+// No base element styling in the styleguide
+@import 'styleguide/base/variables';
+@import 'styleguide/base/icons';
+@import 'styleguide/code-highlight-themes/default';
+
+@import '../app/styleguide/**/*';
+
+* {
+  box-sizing: border-box;
+}
+
+.sg {
+  padding: 0;
+  margin: 0;
+}
+
+
