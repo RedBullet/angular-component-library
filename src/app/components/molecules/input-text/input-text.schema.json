@@ -4,6 +4,9 @@
   "properties": {
     "label": {
       "type": "string"
+    },
+    "error": {
+      "type": "object"
     }
   },
   "required": ["label"]

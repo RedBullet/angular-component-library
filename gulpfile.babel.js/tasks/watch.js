@@ -1,7 +1,7 @@
 import gulp from 'gulp';
 import config from '../config';
 
-gulp.task('watch', ['serve', 'scripts:dev'], () => {
+gulp.task('watch', [], () => {
   gulp.watch([config.paths.scripts], ['scripts:dev']);
   gulp.watch(config.paths.styles, ['styles']);
   gulp.watch(config.paths.styleguideFiles, ['styleguide']);

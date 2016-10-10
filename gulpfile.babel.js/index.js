@@ -12,7 +12,7 @@ import './tasks/scss-lint';
 import './tasks/styleguide';
 
 gulp.task('default', (callback) => {
-  runSequence('copy', ['styleguide', 'styles', 'serve', 'watch'], callback);
+  runSequence('copy', ['styleguide', 'styles', 'scripts:dev', 'serve', 'watch'], callback);
 });
 
 gulp.task('production', (callback) => {

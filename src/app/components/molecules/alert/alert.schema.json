@@ -6,7 +6,8 @@
       "type": "string",
       "oneOf": [
         "info",
-        "warning"
+        "warning",
+        "error"
       ]
     },
     "title": {
