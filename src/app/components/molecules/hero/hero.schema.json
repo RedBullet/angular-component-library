@@ -1,13 +1,13 @@
 {
-  "title": "Logo",
+  "title": "Hero",
   "type": "object",
   "properties": {
-    "src": {
+    "title": {
       "type": "string"
     },
-    "name": {
+    "subtitle": {
       "type": "string"
-    }
+    },
   },
-  "required": ["src", "name"]
+  "required": ["title"]
 }

@@ -22,4 +22,14 @@
     padding: .5em;
     width: 100%;
   }
+
+  &--error {
+    .input-text__input-wrap {
+      margin-bottom: 1em;
+    }
+
+    .input-text__input {
+      border-color: rgba(100, 0, 0, .5);
+    }
+  }
 }

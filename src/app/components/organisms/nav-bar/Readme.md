@@ -1,7 +1,1 @@
-# Example heading
-
-Some text and stuff.
-
-```
-  <logo name="Red Bullet"></logo>
-```
+Nav bar is the main page navbar. No example shown.

@@ -1,10 +1,12 @@
 $grey: rgba(0, 0, 0, .5);
 $blue: rgba(0, 0, 100, .5);
 $yellow: rgba(100, 100, 0, .5);
+$red: rgba(100, 0, 0, .5);
 
 .alert {
   border: .2em solid currentColor;
   color: $grey;
+  margin-bottom: 1em;
   padding: 1em;
 
   &__title {
@@ -23,5 +25,9 @@ $yellow: rgba(100, 100, 0, .5);
 
   &--warning {
     color: $yellow;
+  }
+
+  &--error {
+    color: $red;
   }
 }

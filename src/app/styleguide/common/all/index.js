@@ -15,6 +15,7 @@ const All = angular
         url: '/',
         component: 'styleguide.all'
       });
+    $urlRouterProvider.otherwise('/');
   }])
   .name;
 

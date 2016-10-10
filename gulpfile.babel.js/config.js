@@ -11,6 +11,7 @@ const paths = {
   app: [`${root}/app/app.js`],
   tests: `${root}/app/**/*.spec.js`,
   styles: [`${root}/styles/**/*.scss`,`${root}/app/components/**/*.scss`,`${root}/app/styleguide/**/*.scss`],
+  styleguideFiles: [`${root}/app/**/*.md`, `${root}/app/**/*.schema.json`],
   static: [
     `${root}/index.html`,
     `${root}/fonts/**/*`,

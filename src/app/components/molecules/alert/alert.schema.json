@@ -1,0 +1,21 @@
+{
+  "title": "Alert",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "oneOf": [
+        "info",
+        "warning",
+        "error"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    }
+  },
+  "required": ["content"]
+}
