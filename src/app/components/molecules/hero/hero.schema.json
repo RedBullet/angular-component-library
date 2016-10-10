@@ -7,7 +7,7 @@
     },
     "subtitle": {
       "type": "string"
-    },
+    }
   },
   "required": ["title"]
 }

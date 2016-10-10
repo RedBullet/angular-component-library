@@ -21,7 +21,9 @@
     }
 
     &__label {
+      border: .2em solid transparent;
       float: left;
+      padding: .5em;
       width: 50%;
     }
 

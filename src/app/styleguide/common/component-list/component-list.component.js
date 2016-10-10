@@ -5,7 +5,7 @@ const ComponentListComponent = {
   },
   template: `
     <section ng-repeat="component in $ctrl.components" class="sg-component-list">
-      <sg-component-detail name="{{component.name}}" docs="{{component.docs}}" type="{{$ctrl.type}}" properties=component.schema.properties></sg-component-detail>
+      <sg-component-detail name="{{component.name}}" docs="{{component.docs}}" type="{{$ctrl.type}}" schema=component.schema></sg-component-detail>
     </section>
   `
 };
