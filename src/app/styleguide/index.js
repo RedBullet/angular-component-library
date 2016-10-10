@@ -26,7 +26,7 @@ const Styleguide = angular
   .config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
     $stateProvider
       .state('styleguide', {
-        url: '/styleguide',
+        url: '/',
         component: 'styleguide'
       });
     $urlRouterProvider.otherwise('/');
