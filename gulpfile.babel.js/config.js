@@ -10,7 +10,7 @@ const paths = {
   scripts: [`${root}/app/**/*.js`, `!${root}/app/**/*.spec.js`],
   app: [`${root}/app/app.js`],
   tests: `${root}/app/**/*.spec.js`,
-  styles: [`${root}/styles/**/*.scss`,`${root}/app/components/**/*.scss`],
+  styles: [`${root}/styles/**/*.scss`,`${root}/app/components/**/*.scss`,`${root}/app/styleguide/**/*.scss`],
   static: [
     `${root}/index.html`,
     `${root}/fonts/**/*`,

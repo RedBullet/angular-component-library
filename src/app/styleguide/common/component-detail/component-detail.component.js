@@ -2,11 +2,16 @@ const ComponentDetailComponent = {
   bindings: {
     name: '@',
     docs: '@',
+    type: '@',
   },
   template: `
-    <h3>{{$ctrl.name}}</h3>
-    <div>{{$ctrl.docs}}</div>
-    <div ng-include=$ctrl.docs></div>
+    <section class="sg-component-detail">
+      <header class="sg-component-detail__header">
+        <h2 class="sg-component-detail__subtitle">{{$ctrl.type}}</h2>
+        <h1 class="sg-component-detail__title">{{$ctrl.name}}</h1>
+      </header>
+      <div class="sg-component-detail__docs" ng-include=$ctrl.docs></div>
+    </section>
   `
 };
 

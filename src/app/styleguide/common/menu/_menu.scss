@@ -1,0 +1,38 @@
+.sg-menu {
+  background: $sg-menu-background;
+  border-bottom: $sg-menu-border;
+  font-family: $body-font-family;
+  padding: $spacing-vertical $spacing-horizontal;
+
+  &__logo {
+    color: $sg-menu-logo-color;
+    font-family: $heading-font-family;
+    font-size: 1em;
+    font-weight: $sg-menu-logo-font-weight;
+    height: 1.25em;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  @media (min-width: map-get($bp, 'md')) {
+    border-right: $sg-menu-border;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: $sg-menu-width;
+
+    &__logo {
+      height: auto;
+      padding: $spacing-vertical-lg $spacing-horizontal-lg;
+      text-align: center;
+    }
+  }
+}

@@ -2,14 +2,21 @@ import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import StyleguideComponent from './styleguide.component';
 import StyleguideService from './styleguide.service';
-import Nav from './common/nav';
 import ComponentList from './common/component-list';
 import ComponentDetail from './common/component-detail';
+import Header from './common/header';
+import Menu from './common/menu';
+import Nav from './common/nav';
+import Tabs from './common/tabs';
+
 
 const Styleguide = angular
   .module('styleguide', [
     uiRouter,
     Nav,
+    Header,
+    Menu,
+    Tabs,
     ComponentList,
     ComponentDetail,
   ])

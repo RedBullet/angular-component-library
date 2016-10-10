@@ -1,0 +1,97 @@
+.sg-tabs {
+  font-family: $body-font-family;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+
+  &__list {
+    float: right;
+    list-style-type: none;
+    margin: 0 $spacing-horizontal-sm 0 0;
+    //overflow: hidden;
+    padding: 0;
+  }
+
+  &__item {
+    border: $sg-tabs-border-width $border-style $sg-tabs-border-color;
+    border-width: $sg-tabs-border-width $sg-tabs-border-width 0;
+    background: $sg-tabs-background;
+    color: $sg-tabs-icon-color;
+    float: left;
+
+    span {
+      display: none;
+    }
+
+    .icon {
+      font-size: 2em;
+      width: auto;
+    }
+
+    &--active {
+      background: $sg-tabs-background-active;
+      border-color: $sg-tabs-border-color-active;
+      color: $sg-tabs-icon-color-active;
+      position: relative;
+      z-index: 1;
+
+      &::after {
+        background: $sg-tabs-background-active;
+        content: '';
+        height: $sg-tabs-border-width;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 100%;
+      }
+    }
+  }
+
+  &__button {
+    color: inherit;
+    display: block;
+    padding: $spacing-vertical-sm $spacing-horizontal-sm;
+    text-decoration: none;
+
+    img {
+      display: block;
+    }
+  }
+
+  &__content {
+    clear: both;
+  }
+
+  &__pane {
+    background: $sg-tabs-background-active;
+    border: $sg-tabs-border-width $border-style $sg-tabs-border-color-active;
+    border-width: $sg-tabs-border-width 0;
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  // Tabs menu open
+  &--open {
+    .sg-tabs__list {
+      display: block;
+    }
+
+    .sg-tabs__content {
+      display: block;
+    }
+  }
+
+  @media (min-width: map-get($bp, 'md')) {
+    position: static;
+
+    &__list {
+      margin-right: $spacing-horizontal;
+    }
+  }
+}
+

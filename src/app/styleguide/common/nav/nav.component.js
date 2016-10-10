@@ -1,13 +1,17 @@
 const NavComponent = {
   bindings: {
-    componentTypes: '<',
+    components: '<',
   },
   template: `
-    <nav>
-      <div ng-repeat="type in $ctrl.componentTypes">
-        <a href="#">{{type.name}}</a>
-      </div>
-    </nav>
+    <div class="sg-nav">
+      <ul class="sg-nav__list">
+        <li class="sg-nav__item" ng-repeat="component in $ctrl.components">
+          <a class="sg-nav__link" id="{{component.name}}" href="/styleguide/{{type.type}}/{{component.name}}">
+            {{component.name}}
+          </a>
+        </li>
+      </ul>
+    </div>
   `
 };
 

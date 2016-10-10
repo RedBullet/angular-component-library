@@ -1,0 +1,169 @@
+// Variables
+//
+// Variable format should follow the $[element]-[property]-[orientation]-[size] order.
+
+
+// Table of contents
+//
+// Global
+// -- Colors
+// -- Borders
+// -- Breakpoints
+// -- Fonts
+// -- Spacing
+// -- Transitions
+// Components
+// -- sg-menu
+
+// Colors
+// ==================================================
+
+$color-grey: #e0e6ed;
+$color-white: #fff;
+$color-green: #0d0;
+$color-red: #d00;
+
+// Dark colors
+$color-background-dark: #333;
+$color-text-dark: rgba(0, 0, 0, .9);
+
+// Light colors
+$color-background-light: #fefefe;
+$color-text-light: rgba(255, 255, 255, .9);
+
+// Base colors
+// ==================================================
+
+$body-background: $color-background-light;
+
+$body-color: $color-text-dark;
+$heading-color: $color-text-dark;
+
+// Borders
+// ==================================================
+
+$border-color: $color-grey;
+$border-style: solid;
+
+$border-width: .1em;
+$border-width-lg: $border-width * 2;
+
+$border: $border-style $border-width $border-color;
+
+// Breakpoints
+// ==================================================
+
+$bp: (
+  md: 50em,
+);
+
+// Fonts
+// ==================================================
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700';
+
+$font-family-sans-serif: 'Open Sans', sans-serif;
+$font-family-serif: serif;
+
+$heading-font-family: $font-family-sans-serif;
+$body-font-family: $font-family-sans-serif;
+
+$line-height: 1.5;
+$heading-line-height: 1.1;
+
+$heading-font-weight: 600;
+
+// Spacing
+// ==================================================
+
+$spacing-horizontal: 1em;
+$spacing-horizontal-lg: $spacing-horizontal * 1.5;
+$spacing-horizontal-sm: $spacing-horizontal / 2;
+
+$spacing-horizontal-root: 5vw;
+
+$spacing-vertical: 1em;
+$spacing-vertical-lg: $spacing-vertical * 1.5;
+$spacing-vertical-sm: $spacing-vertical / 2;
+
+$spacing-vertical-root: 5vw;
+
+
+// Menu/Sidebar sg-menu
+// ==================================================
+
+$sg-menu-background: $color-background-light;
+$sg-menu-logo-color: $color-text-dark;
+$sg-menu-logo-font-weight: $heading-font-weight;
+$sg-menu-border: $border-width $border-style $border-color;
+
+// Sidebar width
+$sg-menu-width: 15em;
+
+
+// Tab navigation in menu sg-tabs
+// ==================================================
+
+$sg-tabs-icon-color: darken($color-grey, 5%);
+$sg-tabs-icon-color-active: darken($color-grey, 5%);
+
+$sg-tabs-background: transparent;
+$sg-tabs-background-active: $color-background-light;
+
+$sg-tabs-border-width: $border-width;
+$sg-tabs-border-color: transparent;
+$sg-tabs-border-color-active: $border-color;
+
+
+// Component level navigation in tab pane sg-nav
+// ==================================================
+
+$sg-nav-color: $color-text-dark;
+$sg-nav-color-active: $color-text-dark;
+
+$sg-nav-border-width: $border-width-lg;
+$sg-nav-border-color: transparent;
+$sg-nav-border-color-active: $color-grey;
+
+
+// Page header sg-page-header
+// ==================================================
+
+$sg-page-header-background: transparent;
+
+$sg-page-header-sub-heading-color: lighten($color-text-dark, 5%);
+$sg-page-header-sub-heading-font-size: .8em;
+
+$sg-page-header-heading-color: $color-text-dark;
+$sg-page-header-heading-font-size: 2.75em;
+
+
+// Component variants example sg-variant
+// ==================================================
+
+$sg-variant-background: transparent;
+$sg-variant-border: $border-width $border-style $border-color;
+
+$sg-variant-error-background: #fee;
+
+
+// Component properties sg-properties
+// ==================================================
+
+$sg-properties-font-family: $body-font-family;
+$sg-properties-th-font-family: $body-font-family;
+$sg-properties-th-color: $color-text-dark;
+
+$sg-properties-optional-color: $color-green;
+
+// Small screen style
+$sg-properties-border-color: $border-color;
+$sg-properties-background: $color-background-light;
+$sg-properties-color: $color-text-dark;
+
+// Large screen style
+$sg-properties-background-odd: rgba(0, 0, 0, .05);
+$sg-properties-background-even: transparent;
+
+$sg-properties-color-odd: $color-text-dark;
+$sg-properties-color-even: $color-text-dark;
