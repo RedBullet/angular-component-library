@@ -1,4 +1,4 @@
-class StyleguideController {
+class AllController {
   constructor($http, StyleguideService) {
     this.componentTypes = StyleguideService.getComponentTypes();
     this.components = StyleguideService.getComponents();
@@ -12,6 +12,6 @@ class StyleguideController {
   }
 };
 
-StyleguideController.$inject = ['$http', 'StyleguideService'];
+AllController.$inject = ['$http', 'StyleguideService'];
 
-export default StyleguideController;
+export default AllController;
