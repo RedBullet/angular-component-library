@@ -10,6 +10,8 @@ import Header from './common/header';
 import Menu from './common/menu';
 import Nav from './common/nav';
 import Tabs from './common/tabs';
+import All from './common/all';
+import Single from './common/single';
 
 
 const Styleguide = angular
@@ -22,17 +24,17 @@ const Styleguide = angular
     Tabs,
     ComponentList,
     ComponentDetail,
-    Properties,
+    All,
+    Single,
   ])
   .component('styleguide', StyleguideComponent)
   .service('StyleguideService', StyleguideService)
   .config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
     $stateProvider
       .state('styleguide', {
-        url: '/',
+        abstract: true,
         component: 'styleguide'
       });
-    $urlRouterProvider.otherwise('/');
   }])
   .name;
 

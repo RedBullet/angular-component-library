@@ -52,7 +52,7 @@ const TabsComponent = {
 
       <div class="sg-tabs__content">
         <div class="sg-tabs__pane ng-class:{ 'sg-tabs__pane--active': $ctrl.selected === $index }" id="atoms" ng-repeat="type in $ctrl.types">
-          <sg-nav components=type.components></sg-nav>
+          <sg-nav components=type.components type="{{type.type}}"></sg-nav>
         </div>
       </div>
 
