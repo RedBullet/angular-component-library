@@ -21,12 +21,6 @@ export const bundlers = scripts.map(script => {
   };
 });
 
-export function applyEnv(bundle, dev = false) {
-  return bundle.transform(envify(
-    { NODE_ENV: (dev ? 'development' : 'production') }
-  ), { global: true });
-}
-
 export function scriptsStream(bundlerArr, dev = false, shouldThrow = true) {
   const tasks = bundlerArr.map(bundler => {
     return bundler.bundle
@@ -50,7 +44,7 @@ export function scriptsStream(bundlerArr, dev = false, shouldThrow = true) {
 
 function bundleScripts(bundlerArr, dev = false, shouldThrow = true) {
   const updatedBundlerArr = bundlerArr.map(bundler => {
-    return { ...bundler, bundle: applyEnv(bundler.bundle, dev) };
+    return { ...bundler, bundle: bundler.bundle };
   });
   return scriptsStream(updatedBundlerArr, dev, shouldThrow);
 }
