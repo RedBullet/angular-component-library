@@ -10,7 +10,9 @@ const InputTextComponent = {
         <div class="input-text__input-wrap">
           <input type="text" class="input-text__input" value="" />
         </div>
-        <alert title="{{ $ctrl.error.title }}" content="{{ $ctrl.error.content }}" type="error" ng-if="$ctrl.error"></alert>
+        <div class="input-text__error" ng-if="$ctrl.error">
+          <alert title="{{ $ctrl.error.title }}" content="{{ $ctrl.error.content }}" type="error"></alert>
+        </div>
       </div>
     </section>
   `,
