@@ -1,0 +1,10 @@
+{
+  "title": "List info",
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "object"
+    }
+  },
+  "required": ["items"]
+}

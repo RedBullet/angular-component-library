@@ -1,5 +1,6 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
+import hljs from 'angular-highlightjs';
 import StyleguideComponent from './styleguide.component';
 import StyleguideService from './styleguide.service';
 import ComponentList from './common/component-list';
@@ -10,9 +11,11 @@ import Menu from './common/menu';
 import Nav from './common/nav';
 import Tabs from './common/tabs';
 
+
 const Styleguide = angular
   .module('styleguide', [
     uiRouter,
+    hljs,
     Nav,
     Header,
     Menu,

@@ -1,0 +1,10 @@
+{
+  "title": "Input text",
+  "type": "object",
+  "properties": {
+    "label": {
+      "type": "string"
+    }
+  },
+  "required": ["label"]
+}

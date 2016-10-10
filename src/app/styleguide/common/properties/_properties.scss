@@ -1,17 +1,30 @@
 .sg-properties {
-  border-collapse: collapse;
-  border-spacing: 0;
-  font-family: $sg-properties-font-family;
-  width: 100%;
+  background: $body-background;
+  padding: $spacing-vertical-root / 2 $spacing-horizontal-root;
 
-  th {
-    color: $sg-properties-th-color;
-    font-family: $sg-properties-th-font-family;
-    font-size: .8em;
+  &__title {
+    color: $heading-color;
+    font-family: $heading-font-family;
+    font-size: 1.25em;
     font-weight: $heading-font-weight;
-    padding: $spacing-vertical $spacing-horizontal;
-    text-align: left;
-    text-transform: uppercase;
+    margin: 0 0 $spacing-vertical;
+  }
+
+  &__table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-family: $sg-properties-font-family;
+    width: 100%;
+
+    th {
+      color: $sg-properties-th-color;
+      font-family: $sg-properties-th-font-family;
+      font-size: .8em;
+      font-weight: $heading-font-weight;
+      padding: $spacing-vertical $spacing-horizontal;
+      text-align: left;
+      text-transform: uppercase;
+    }
   }
 
   &__property {
@@ -23,25 +36,27 @@
   }
 
   @media screen and (max-width: map-get($bp, 'md')) {
-    display: block;
-
-    thead {
-      display: none;
-    }
-
-    tbody {
+    &__table {
       display: block;
-    }
 
-    tr {
-      background: $sg-properties-background;
-      border: $border-width $border-style $sg-properties-border-color;
-      border-left-width: $border-width-lg;
-      color: $sg-properties-color;
-      display: block;
-      margin-bottom: $spacing-vertical;
-      overflow: hidden;
-      padding: $spacing-vertical $spacing-horizontal;
+      thead {
+        display: none;
+      }
+
+      tbody {
+        display: block;
+      }
+
+      tr {
+        background: $sg-properties-background;
+        border: $border-width $border-style $sg-properties-border-color;
+        border-left-width: $border-width-lg;
+        color: $sg-properties-color;
+        display: block;
+        margin-bottom: $spacing-vertical;
+        overflow: hidden;
+        padding: $spacing-vertical $spacing-horizontal;
+      }
     }
 
     &__property {
@@ -84,19 +99,21 @@
   }
 
   @media screen and (min-width: map-get($bp, 'md')) {
-    td {
-      font-size: .8em;
-      padding: $spacing-vertical $spacing-horizontal;
-    }
+    &__table {
+      td {
+        font-size: .8em;
+        padding: $spacing-vertical $spacing-horizontal;
+      }
 
-    tbody tr:nth-child(odd) {
-      background: $sg-properties-background-odd;
-      color: $sg-properties-color-odd;
-    }
+      tbody tr:nth-child(odd) {
+        background: $sg-properties-background-odd;
+        color: $sg-properties-color-odd;
+      }
 
-    tbody tr:nth-child(even) {
-      background: $sg-properties-background-even;
-      color: $sg-properties-color-even;
+      tbody tr:nth-child(even) {
+        background: $sg-properties-background-even;
+        color: $sg-properties-color-even;
+      }
     }
 
     &__property {

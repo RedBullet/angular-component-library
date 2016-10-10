@@ -2,9 +2,10 @@ import controller from './logo.controller';
 
 const LogoComponent = {
   bindings: {
-    name: '@'
+    name: '@',
+    src: '@',
   },
-  template: `<img src="https://placekitten.com/80/80" alt="{{ $ctrl.name }}">`,
+  template: `<img src="{{ $ctrl.src }}" alt="{{ $ctrl.name }}">`,
 };
 
 export default LogoComponent;

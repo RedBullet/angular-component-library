@@ -1,0 +1,10 @@
+{
+  "title": "Nav bar",
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "object"
+    }
+  },
+  "required": ["items"]
+}
