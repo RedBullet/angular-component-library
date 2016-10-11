@@ -1,27 +1,63 @@
-<a href="https://courses.toddmotto.com" target="_blank"><img src="https://toddmotto.com/img/ua.png"></a>
+# Angular Component Library
 
-# Angular 1.5 component architecture app
+This repo is used to create a component API for your Angular 1.5 project.
 
-> Try the [Contacts Manager](https://contacts-manager-e486f.firebaseapp.com) app! You'll need to register and create an account.
+## Principles
 
----
+- Todd Motto component architecture [styleguide](https://github.com/toddmotto/angular-styleguide)
+- [Atomic Design](http://atomicdesign.bradfrost.com/)
+- [BEM CSS](https://en.bem.info/)
 
-A [Contacts Manager](https://contacts-manager-e486f.firebaseapp.com) application built on Angular 1.5 components, ui-router 1.0.0, Firebase. Want to build it? Jump on my [Angular 1.5 Master course](https://courses.toddmotto.com).
+## Setup
 
-### List of features:
+- Fork and clone the repo
+- Run `npm install`
+- Dev, run: `npm run start`
 
-- Angular 1.5 `.component()` method
-- Stateful/stateless and routed components
-- One-way dataflow
-- Lifecycle hooks
-- ui-router 1.0.0
-- Firebase auth and database/hosting
-- Fully tested, including spec files
-- Built against my component architecture [styleguide](https://github.com/toddmotto/angular-styleguide)
-- Proper SCSS architecture to provide maintainable, scalable and well-organized code
+## Contribute
 
-### Setup and install
+- Code is linted against: hyphenated_BEM (SCSS), ES6 with Angular plugin
 
-To run this app, follow the [instructions here](https://github.com/toddmotto/ultimate-angular-master-seed). Basically `npm install` and `npm start`. Run tests with `npm test`. Have fun!
+### Set up linting in your Text Editor
 
-Yes, I'm going to convert this to ES6, and maybe TypeScript. You're welcome to PR the transition (open an issue first) but please don't change application functionality or anything else :)
+Using [Atom](https://atom.io/) you can set up the scss-lint, eslint, and linter-php automatically by installing the following plugins:
+
+- https://atom.io/packages/linter
+- https://atom.io/packages/linter-scss-lint
+- https://atom.io/packages/linter-eslint
+
+via `apm`: `apm install linter linter-scss-lint linter-eslint`
+
+Using [SublimeText] you can set up the scss-lint and eslint following these instructions
+
+- http://www.sublimelinter.com/en/latest/
+- http://jonathancreamer.com/setup-eslint-with-es6-in-sublime-text/
+- https://github.com/attenzione/SublimeLinter-scss-lint
+
+### Committing
+
+`npm run lint` is run in a pre-commit hook, and if it fails, your code will not be committed.
+
+Commit messages are validated using [validate-commit-msg](https://github.com/kentcdodds/validate-commit-msg), which follows the Angular commit message guidelines.
+
+Valid types are:
+
+- feat: A new feature
+- fix: A bug fix
+- docs: Documentation only changes
+- style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- refactor: A code change that neither fixes a bug nor adds a feature
+- perf: A code change that improves performance
+- test: Adding missing tests
+- chore: Changes to the build process or auxiliary tools and libraries such as documentation generation
+
+Commit messages should use the imperative, present tense: “change” not “changed” nor “changes”.
+
+Example commit messages:
+
+`feat: Add linting for javascript files in the /component folder`
+`chore: Update eslint`
+
+### Pushing
+
+The components are tested with Karma/Jasmine automatically pre-push.
