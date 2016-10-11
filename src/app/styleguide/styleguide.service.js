@@ -1,5 +1,3 @@
-import Components from '../components';
-
 class StyleguideService {
   constructor($http) {
     this.$http = $http;
