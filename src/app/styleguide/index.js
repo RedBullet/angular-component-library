@@ -13,7 +13,6 @@ import Tabs from './common/tabs';
 import All from './common/all';
 import Single from './common/single';
 
-
 const Styleguide = angular
   .module('styleguide', [
     uiRouter,
@@ -33,7 +32,12 @@ const Styleguide = angular
     $stateProvider
       .state('styleguide', {
         abstract: true,
-        component: 'styleguide'
+        component: 'styleguide',
+        resolve: {
+          types: ['StyleguideService', (StyleguideService) => {
+            return StyleguideService.getData();
+          }]
+        },
       });
   }])
   .name;

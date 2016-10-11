@@ -1,23 +1,18 @@
 class SingleController {
-  constructor($stateParams, $http, StyleguideService) {
-    const ctrl = this;
+  constructor($stateParams) {
+    const type = this.types.find((type) => {
+      return type.type === $stateParams.type;
+    });
 
-    $http.get('docs/components.json')
-      .success((data) => {
-        const type = data.find((type) => {
-          return type.type === $stateParams.type;
-        });
+    const component = type.components.find((component) => {
+      return component.name === $stateParams.component;
+    });
 
-        const component = type.components.find((component) => {
-          return component.name === $stateParams.component;
-        });
-
-        ctrl.type = type;
-        ctrl.component = component;
-      });
+    this.type = type;
+    this.component = component;
   }
 };
 
-SingleController.$inject = ['$stateParams', '$http', 'StyleguideService'];
+SingleController.$inject = ['$stateParams'];
 
 export default SingleController;

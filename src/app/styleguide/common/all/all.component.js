@@ -1,7 +1,7 @@
-import AllController from './all.controller';
-
 const AllComponent = {
-  controller: AllController,
+  bindings: {
+    types: '<',
+  },
   template: `
     <div ng-repeat="type in $ctrl.types">
       <sg-component-list components=type.components type=type.type></sg-component-list>

@@ -1,7 +1,9 @@
 import StyleguideController from './styleguide.controller';
 
 const StyleguideComponent = {
-  controller: StyleguideController,
+  bindings: {
+    types: '<',
+  },
   template: `
     <sg-header types=$ctrl.types></sg-header>
 

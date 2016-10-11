@@ -1,33 +1,18 @@
 import Components from '../components';
 
 class StyleguideService {
-  getComponentTypes() {
-    return [
-      {
-        name: 'Atoms',
-      },
-      {
-        name: 'Molecules',
-      },
-      {
-        name: 'Organisms',
-      }
-    ]
+  constructor($http) {
+    this.$http = $http;
   }
 
-  getComponents() {
-    return [
-      {
-        name: 'Test 1',
-      },
-      {
-        name: 'Test 2',
-      },
-      {
-        name: 'Test 3',
-      },
-    ];
+  getData() {
+    return this.$http.get('docs/components.json')
+      .then((response) => {
+        return response.data;
+      });
   }
 }
+
+StyleguideService.$inject = ['$http'];
 
 export default StyleguideService;
