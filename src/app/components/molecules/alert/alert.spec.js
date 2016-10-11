@@ -1,9 +1,7 @@
 /* eslint-disable angular/window-service  */
-
 describe('Alert', () => {
-  let scope, element, $window;
-
-  beforeEach(window.module('root'));
+  let scope, element;
+  beforeEach(angular.mock.module('components.molecules.alert'));
 
   beforeEach(inject(['$rootScope', '$compile', ($rootScope, $compile) => {
     scope = $rootScope.$new();

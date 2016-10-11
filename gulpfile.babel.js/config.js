@@ -17,7 +17,12 @@ const paths = {
     `${root}/fonts/**/*`,
     `${root}/images/**/*`
   ],
-  components: `${root}/app/components`
+  components: `${root}/app/components`,
+  test: {
+    tests: '**/*.spec.js',
+    files: 'src/app/**/*.js',
+    instrument: '.tmp/'
+  }
 };
 
 const config = {
