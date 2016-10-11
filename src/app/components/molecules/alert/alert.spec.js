@@ -3,6 +3,10 @@ describe('Alert', () => {
   let scope, element;
   beforeEach(angular.mock.module('components.molecules.alert'));
 
+  beforeEach(window.module(($urlRouterProvider) => {
+    $urlRouterProvider.deferIntercept();
+  }));
+
   beforeEach(inject(['$rootScope', '$compile', ($rootScope, $compile) => {
     scope = $rootScope.$new();
     element = angular.element('<alert title="{{alert.title}}" content="{{alert.content}}"></alert>');

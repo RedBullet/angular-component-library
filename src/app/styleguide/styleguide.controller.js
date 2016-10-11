@@ -1,17 +1,13 @@
 class StyleguideController {
-  constructor($http, StyleguideService) {
-    this.componentTypes = StyleguideService.getComponentTypes();
-    this.components = StyleguideService.getComponents();
-
+  constructor(StyleguideService) {
     const ctrl = this;
 
-    $http.get('docs/components.json')
-      .success((data) => {
-        ctrl.types = data;
-      });
+    StyleguideService.getData().then((types) => {
+      ctrl.types = types;
+    });
   }
 };
 
-StyleguideController.$inject = ['$http', 'StyleguideService'];
+StyleguideController.$inject = ['StyleguideService'];
 
 export default StyleguideController;
