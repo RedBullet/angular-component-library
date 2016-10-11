@@ -1,7 +1,7 @@
 /* eslint-disable angular/window-service  */
 describe('Alert', () => {
   let scope, element;
-  beforeEach(angular.mock.module('components.molecules.alert'));
+  beforeEach(angular.mock.module('root'));
 
   beforeEach(window.module(($urlRouterProvider) => {
     $urlRouterProvider.deferIntercept();

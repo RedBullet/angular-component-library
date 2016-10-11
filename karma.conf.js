@@ -72,7 +72,6 @@ module.exports = function(config) {
 
     coverageReporter: {
       reporters:[
-        {type: 'html'},
         {type: 'text'},
         {type: 'text-summary'}
       ]
