@@ -31,6 +31,7 @@ const Styleguide = angular
   .config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
     $stateProvider
       .state('styleguide', {
+        name: 'styleguide',
         abstract: true,
         component: 'styleguide',
         resolve: {

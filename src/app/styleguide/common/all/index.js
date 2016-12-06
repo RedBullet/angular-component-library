@@ -12,6 +12,7 @@ const All = angular
   .config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
     $stateProvider
       .state('styleguide.all', {
+        name: 'all',
         url: '/',
         component: 'styleguide.all'
       });

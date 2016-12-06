@@ -25,7 +25,7 @@ const ExampleTemplate = {
       <panel title="Panel 2 title">
         <input-text label="Text input"></input-text>
       </panel>
-      <alert content="Alert content"/></alert>
+      <alert content="Alert content"></alert>
     </page>
   `
 };
