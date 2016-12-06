@@ -5,6 +5,7 @@ This repo is used to create a component API for your Angular 1.5 project.
 ## Principles
 
 - Todd Motto component architecture [styleguide](https://github.com/toddmotto/angular-styleguide)
+- [Stateless components](https://toddmotto.com/stateless-angular-components/)
 - [Atomic Design](http://atomicdesign.bradfrost.com/)
 - [BEM CSS](https://en.bem.info/)
 

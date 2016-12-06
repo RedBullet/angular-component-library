@@ -43,7 +43,7 @@ const TabsComponent = {
 
       <ul class="sg-tabs__list" id="sg-tabs">
         <li class="sg-tabs__item ng-class:{ 'sg-tabs__item--active': $ctrl.selected === $index }" ng-repeat="type in $ctrl.types">
-          <a href="#{{type.type}}" class="sg-tabs__button" ng-click="$ctrl.selectTab($index)">
+          <a class="sg-tabs__button" ng-click="$ctrl.selectTab($index)">
             <i class="icon icon-{{type.type.toLowerCase()}} {{$ctrl.selected}} {{$index}}"></i>
             <span>{{type.type}}</span>
           </a>

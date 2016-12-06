@@ -10,6 +10,7 @@ import './tasks/watch';
 import './tasks/eslint';
 import './tasks/scss-lint';
 import './tasks/styleguide';
+import './tasks/test';
 
 gulp.task('default', (callback) => {
   runSequence('copy', ['styleguide', 'styles', 'scripts:dev', 'serve', 'watch'], callback);
