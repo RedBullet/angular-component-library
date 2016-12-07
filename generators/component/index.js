@@ -5,6 +5,8 @@ var chalk = require('chalk');
 var yosay = require('yosay');
 var camelCase = require('camelcase');
 var upperCamelCase = require('uppercamelcase');
+var gulp = require('gulp');
+var inject = require('gulp-inject-string');
 
 const paths = {
   components: 'src/app/components',
@@ -93,4 +95,15 @@ module.exports = yeoman.Base.extend({
     );
   },
 
+  end: function () {
+    var className = upperCamelCase(this.props.name);
+    var path = './' + this.props.name;
+    var type = this.props.type;
+    var typePath = paths.components + '/' + type;
+
+    return gulp.src(typePath + '/index.js')
+      .pipe(inject.before('/* inject imports */', "import " + className + " from '" + path + "';\n"))
+      .pipe(inject.before('    /* inject classNames */', '    ' + className + ',\n'))
+      .pipe(gulp.dest(typePath));
+  }
 });
