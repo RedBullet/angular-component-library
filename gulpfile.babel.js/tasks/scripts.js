@@ -12,11 +12,17 @@ import eventStream from 'event-stream';
 import config from '../config';
 import envify from 'loose-envify/custom';
 import ngAnnotate from 'gulp-ng-annotate';
+import stringify from 'stringify';
 
 const scripts = config.paths.app;
 export const bundlers = scripts.map(script => {
   return {
-    bundle: browserify(path.join(script), { debug: true }).transform(babelify),
+    bundle: browserify(path.join(script), { debug: true })
+      .transform(babelify)
+      .transform(stringify({
+        extensions: ['.html'],
+        minify: true,
+      })),
     script,
   };
 });

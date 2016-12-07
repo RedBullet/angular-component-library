@@ -12,15 +12,15 @@ module.exports = function(config) {
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     // note the browserify framework is required
-    frameworks: ['browserify', 'jasmine'],
+    frameworks: ['mocha', 'sinon-chai', 'browserify'],
 
 
     // list of files / patterns to load in the browser
     files: [
-      'dist/instrument.js',
+      'dist/src/app/app.js',
       'node_modules/angular-mocks/angular-mocks.js',
       // the instrumented code from istanbul
-      'src/app/**/*.spec.js'
+      'src/app/**/*.spec.js',
     ],
 
     // list of files to exclude
@@ -32,11 +32,13 @@ module.exports = function(config) {
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
       'src/app/**/*.spec.js': ['browserify', 'sourcemap'],
-      'dist/instrument.js': ['sourcemap']
     },
 
     browserify: {
-      transform: [ ['babelify', {presets: ['es2015']} ] ],
+      transform: [
+        ['babelify', {presets: ['es2015']} ],
+        'stringify',
+      ],
       debug: true,
 
       // don't forget to register the extensions
@@ -46,7 +48,7 @@ module.exports = function(config) {
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
     // here the coverage reporter would be running to output the final coverage report
-    reporters: ['progress', 'coverage', 'threshold'],
+    reporters: ['mocha', 'progress', 'coverage', 'threshold'],
 
 
     // web server port
