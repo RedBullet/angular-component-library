@@ -1,3 +1,14 @@
+class ComponentDetailController {
+  constructor($log) {
+    this.$log = $log;
+  }
+  callback() {
+    this.$log.info(arguments);
+  }
+}
+
+ComponentDetailController.$inject = ['$log'];
+
 const ComponentDetailComponent = {
   bindings: {
     name: '@',
@@ -5,6 +16,7 @@ const ComponentDetailComponent = {
     schema: '<',
     type: '@',
   },
+  controller: ComponentDetailController,
   template: `
     <section class="sg-component-detail">
       <header class="sg-component-detail__header">
