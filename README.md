@@ -17,6 +17,7 @@ This repo is used to create a component API for your Angular 1.5 project.
 
 ## Contribute
 
+- Run `npm run create` to create a new component using the Yeoman generator
 - Code is linted against: hyphenated_BEM (SCSS), ES6 with Angular plugin
 
 ### Set up linting in your Text Editor
