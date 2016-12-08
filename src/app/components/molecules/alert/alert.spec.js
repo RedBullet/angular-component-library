@@ -1,9 +1,11 @@
-/* eslint-disable angular/window-service  */
+import { assert, should, expect } from 'chai';
+
 describe('Alert', () => {
   let scope, element;
+
   beforeEach(angular.mock.module('root'));
 
-  beforeEach(window.module(($urlRouterProvider) => {
+  beforeEach(angular.mock.module(($urlRouterProvider) => {
     $urlRouterProvider.deferIntercept();
   }));
 
@@ -20,15 +22,13 @@ describe('Alert', () => {
     const title = element[0].querySelector('.alert__title');
     const content = element[0].querySelector('.alert__content');
 
-    expect(component).toBeTruthy();
-    expect(title).toBeTruthy();
-    expect(content).toBeTruthy();
-    expect(component.classList.contains('alert--info')).toBeTruthy();
+    expect(component).to.exist;
+    expect(title).to.exist;
+    expect(content).to.exist;
+    expect(component.classList.contains('alert--info')).to.be.ok;
 
-    expect(title.textContent).toBe('Alert title');
-    expect(content.textContent).toBe('Alert content');
+    expect(title.textContent).to.equal('Alert title');
+    expect(content.textContent).to.equal('Alert content');
   });
 
 });
-
-/* eslint-enable angular/window-service  */
