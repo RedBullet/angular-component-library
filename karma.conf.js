@@ -17,7 +17,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'src/app/app.js',
+      '.tmp/instrument.js',
       'node_modules/angular-mocks/angular-mocks.js',
       // the instrumented code from istanbul
       'src/app/**/*.spec.js',
@@ -33,6 +33,7 @@ module.exports = function(config) {
     preprocessors: {
       'src/app/**/*.spec.js': ['browserify', 'sourcemap'],
       'src/app/app.js': ['browserify', 'sourcemap'],
+      'dist/instrument.js': ['sourcemap']
     },
 
     browserify: {
