@@ -1,12 +1,9 @@
 import angular from 'angular';
-import uiRouter from 'angular-ui-router';
 import AllComponent from './all.component';
 import StyleguideService from '../../styleguide.service';
 
 const All = angular
-  .module('styleguide.all', [
-    uiRouter,
-  ])
+  .module('styleguide.all', [])
   .component('styleguide.all', AllComponent)
   .service('StyleguideService', StyleguideService)
   .config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {

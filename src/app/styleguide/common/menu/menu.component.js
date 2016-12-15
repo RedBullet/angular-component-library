@@ -9,7 +9,6 @@ const MenuComponent = {
       <nav role="navigation">
         <sg-tabs types=$ctrl.types></sg-nav>
       </nav>
-
     </div>
   `
 };

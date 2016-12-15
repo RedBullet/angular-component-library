@@ -30,7 +30,7 @@
         "code": 59648
       },
       "setIdx": 0,
-      "setId": 0,
+      "setId": 1,
       "iconIdx": 0
     },
     {
@@ -60,7 +60,7 @@
         "code": 59649
       },
       "setIdx": 0,
-      "setId": 0,
+      "setId": 1,
       "iconIdx": 1
     },
     {
@@ -89,7 +89,7 @@
         "code": 59650
       },
       "setIdx": 0,
-      "setId": 0,
+      "setId": 1,
       "iconIdx": 2
     },
     {
@@ -119,7 +119,7 @@
         "code": 59651
       },
       "setIdx": 0,
-      "setId": 0,
+      "setId": 1,
       "iconIdx": 3
     },
     {
@@ -149,7 +149,7 @@
         "code": 59652
       },
       "setIdx": 0,
-      "setId": 0,
+      "setId": 1,
       "iconIdx": 4
     },
     {
@@ -188,7 +188,7 @@
         "code": 59653
       },
       "setIdx": 0,
-      "setId": 0,
+      "setId": 1,
       "iconIdx": 5
     },
     {
@@ -254,7 +254,7 @@
         "code": 59654
       },
       "setIdx": 0,
-      "setId": 0,
+      "setId": 1,
       "iconIdx": 6
     },
     {
@@ -284,7 +284,7 @@
         "code": 59655
       },
       "setIdx": 0,
-      "setId": 0,
+      "setId": 1,
       "iconIdx": 7
     },
     {
@@ -466,7 +466,7 @@
         "code": 59656
       },
       "setIdx": 0,
-      "setId": 0,
+      "setId": 1,
       "iconIdx": 8
     },
     {
@@ -495,13 +495,13 @@
         "code": 59657
       },
       "setIdx": 0,
-      "setId": 0,
+      "setId": 1,
       "iconIdx": 9
     }
   ],
   "height": 1024,
   "metadata": {
-    "name": "icomoon"
+    "name": "Styleguide-icons"
   },
   "preferences": {
     "showGlyphs": true,
@@ -510,16 +510,21 @@
     "showQuickUse2": true,
     "showSVGs": true,
     "fontPref": {
-      "prefix": "icon-",
+      "prefix": "styleguide-icon-",
       "metadata": {
-        "fontFamily": "icomoon"
+        "fontFamily": "Styleguide-icons",
+        "majorVersion": 1,
+        "minorVersion": 0
       },
       "metrics": {
         "emSize": 1024,
         "baseline": 6.25,
         "whitespace": 50
       },
-      "embed": false
+      "embed": false,
+      "noie8": true,
+      "ie7": false,
+      "showSelector": true
     },
     "imagePref": {
       "prefix": "icon-",

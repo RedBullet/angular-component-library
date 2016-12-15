@@ -22,7 +22,7 @@ const ComponentDetailComponent = {
     <section class="sg-component-detail">
       <div ng-if="$ctrl.isolated !== 'true'">
         <header class="sg-component-detail__header">
-          <a ui-sref="styleguide.single({isolated: true})" target="_blank" class="sg-component-detail__header__link">Open isolated</a>
+          <a ui-sref="styleguide.single({type: $ctrl.type, component: $ctrl.name, isolated: true})" target="_blank" class="sg-component-detail__header__link">Open isolated</a>
           <h2 class="sg-component-detail__subtitle">{{$ctrl.type}}</h2>
           <h1 class="sg-component-detail__title">{{$ctrl.name}}</h1>
         </header>
