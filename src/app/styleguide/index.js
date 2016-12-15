@@ -37,6 +37,9 @@ const Styleguide = angular
         resolve: {
           types: ['StyleguideService', (StyleguideService) => {
             return StyleguideService.getData();
+          }],
+          isolated: ['$stateParams', ($stateParams) => {
+            return $stateParams.hasOwnProperty('isolated') && $stateParams.isolated === 'true';
           }]
         },
       });

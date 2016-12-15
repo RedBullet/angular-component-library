@@ -3,7 +3,6 @@
 // No base element styling in the styleguide
 @import 'styleguide/base/variables';
 @import 'styleguide/base/icons';
-@import 'styleguide/code-highlight-themes/default';
 
 @import '../app/styleguide/**/*';
 
@@ -12,8 +11,6 @@
 }
 
 .sg {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
-
-

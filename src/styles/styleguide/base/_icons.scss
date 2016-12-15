@@ -1,18 +1,17 @@
-// scss-lint:disable all
+// sass-lint:disable-all
 @font-face {
-  font-family: 'icomoon';
-  src: url('../fonts/styleguide-icons/fonts/icomoon.eot?mwri56');
-  src: url('../fonts/styleguide-icons/fonts/icomoon.eot?mwri56#iefix') format('embedded-opentype'),
-    url('../fonts/styleguide-icons/fonts/icomoon.ttf?mwri56') format('truetype'),
-    url('../fonts/styleguide-icons/fonts/icomoon.woff?mwri56') format('woff'),
-    url('../fonts/styleguide-icons/fonts/icomoon.svg?mwri56#icomoon') format('svg');
+  font-family: 'Styleguide-icons';
+  src:
+    url('../fonts/styleguide-icons/fonts/Styleguide-icons.ttf?3etcdp') format('truetype'),
+    url('../fonts/styleguide-icons/fonts/Styleguide-icons.woff?3etcdp') format('woff'),
+    url('../fonts/styleguide-icons/fonts/Styleguide-icons.svg?3etcdp#Styleguide-icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="styleguide-icon-"], [class*=" styleguide-icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: 'Styleguide-icons' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -25,34 +24,36 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-atoms:before {
+.styleguide-icon-atoms:before {
   content: "\e900";
 }
-.icon-burger:before {
+.styleguide-icon-burger:before {
   content: "\e901";
 }
-.icon-cross:before {
+.styleguide-icon-cross:before {
   content: "\e902";
 }
-.icon-desktop:before {
+.styleguide-icon-desktop:before {
   content: "\e903";
 }
-.icon-mobile:before {
+.styleguide-icon-mobile:before {
   content: "\e904";
 }
-.icon-molecules:before {
+.styleguide-icon-molecules:before {
   content: "\e905";
 }
-.icon-organisms:before {
+.styleguide-icon-organisms:before {
   content: "\e906";
 }
-.icon-tablet:before {
+.styleguide-icon-tablet:before {
   content: "\e907";
 }
-.icon-templates:before {
+.styleguide-icon-templates:before {
   content: "\e908";
 }
-.icon-tick:before {
+.styleguide-icon-tick:before {
   content: "\e909";
 }
-// scss-lint:enable all
+
+
+// sass-lint:enable-all

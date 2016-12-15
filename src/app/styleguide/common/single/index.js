@@ -12,7 +12,7 @@ const Single = angular
   .config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
     $stateProvider
       .state('styleguide.single', {
-        url: '/:type/:component',
+        url: '/:type/:component?isolated',
         component: 'styleguide.single'
       });
   }])

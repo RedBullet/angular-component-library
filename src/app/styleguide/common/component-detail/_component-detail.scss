@@ -2,6 +2,24 @@
   &__header {
     background: $sg-page-header-background;
     padding: $spacing-vertical-root $spacing-horizontal-root $spacing-vertical-root / 2;
+
+    &__link {
+      color: inherit;
+      display: none;
+      float: right;
+      font-size: .9em;
+      text-decoration: none;
+
+      &::after {
+        content: "\2192";
+      }
+    }
+
+    &:hover {
+      .sg-component-detail__header__link {
+        display: block;
+      }
+    }
   }
 
   &__subtitle {
@@ -29,5 +47,9 @@
 
   &__docs {
     padding: $spacing-vertical-root / 2 $spacing-horizontal-root;
+
+    &--isolated {
+      padding: 0;
+    }
   }
 }
