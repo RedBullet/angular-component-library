@@ -1,9 +1,9 @@
 .sg-styleguide {
-  &--isolated {
-    margin-left: 0 !important;
-  }
-
   @media (min-width: map-get($bp, 'md')) {
     margin-left: $sg-menu-width;
+  }
+
+  &--isolated {
+    margin-left: 0 !important;
   }
 }
