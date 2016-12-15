@@ -20,7 +20,7 @@ const paths = {
   components: `${root}/app/components`,
   test: {
     tests: '**/*.spec.js',
-    files: 'src/app/**/*.js',
+    files: 'src/app/app.js',
     instrument: '.tmp/'
   }
 };
