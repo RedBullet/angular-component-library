@@ -28,7 +28,6 @@
     "angular-ui-router": "1.0.0-beta.2"
   },
   "devDependencies": {
-    "angular-highlightjs": "^0.6.2",
     "angular-mocks": "^1.5.8",
     "assert": "^1.4.1",
     "babel-core": "^6.11.4",

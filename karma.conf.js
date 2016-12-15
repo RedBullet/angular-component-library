@@ -17,7 +17,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'src/app/app.js',
+      '.tmp/instrument.js',
       'node_modules/angular-mocks/angular-mocks.js',
       // the instrumented code from istanbul
       'src/app/**/*.spec.js',
@@ -33,13 +33,13 @@ module.exports = function(config) {
     preprocessors: {
       'src/app/**/*.spec.js': ['browserify', 'sourcemap'],
       'src/app/app.js': ['browserify', 'sourcemap'],
+      'dist/instrument.js': ['sourcemap']
     },
 
     browserify: {
       transform: [
         ['babelify', {presets: ['es2015']}],
       ],
-      debug: true,
 
       // don't forget to register the extensions
       extensions: ['.js']
@@ -61,7 +61,7 @@ module.exports = function(config) {
 
     // level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-    logLevel: config.LOG_DEBUG,
+    logLevel: config.LOG_ERROR,
 
 
     // enable / disable watching file and executing tests whenever any file changes

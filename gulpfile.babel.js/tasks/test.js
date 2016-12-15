@@ -5,12 +5,20 @@ import source from 'vinyl-source-stream';
 import istanbulTransform from 'browserify-babel-istanbul';
 import { Server as karmaServer } from 'karma';
 import glob from 'glob';
+import gulpUtil from 'gulp-util';
 
 gulp.task('test',['build-instrument'] , (done) => {
   const server = new karmaServer({
     configFile: __dirname + '/../../karma.conf.js',
     singleRun: true
-  }, () => {done()});
+  }, (error) => {
+    if (error !== 0) {
+      gulpUtil.log('Karma exited with error code ' + error);
+      done();
+      return process.exit(error);
+    }
+    done();
+  });
 
   server.start();
 });
@@ -22,7 +30,7 @@ gulp.task('build-instrument', () => {
   });
 
   return browserify({
-    debug: true
+    debug: false
   })
   .add(files)
   .transform(istanbulTransform({
