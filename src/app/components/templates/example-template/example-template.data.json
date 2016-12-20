@@ -1,0 +1,35 @@
+{
+  "variants": {
+    "base": {
+      "navBarItems": [
+        {
+          "url": "#",
+          "title": "Nav menu item"
+        },
+        {
+          "url": "#",
+          "title": "Nav menu item"
+        },
+        {
+          "url": "#",
+          "title": "Nav menu item"
+        }
+      ],
+      "listInfoItems": [
+        {
+          "label": "Item label",
+          "value": "Item value"
+        },
+        {
+          "label": "Item label",
+          "value": "Item value"
+        },
+        {
+          "label": "Item label",
+          "value": "Item value"
+        }
+      ],
+      "alertContent": "Some alerty content"
+    }
+  }
+}

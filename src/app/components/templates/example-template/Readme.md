@@ -1,1 +1,1 @@
-<example-template></example-template>
+This is an example template
