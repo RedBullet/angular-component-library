@@ -7,7 +7,14 @@ const SingleComponent = {
   },
   controller: SingleController,
   template: `
-    <sg-component-detail name="{{$ctrl.component.name}}" docs="{{$ctrl.component.docs}}" type="{{$ctrl.type.type}}" schema=$ctrl.component.schema isolated="{{$ctrl.isolated}}"></sg-component-detail>
+    <sg-component-detail
+      name="{{$ctrl.component.name}}"
+      docs="{{$ctrl.component.docs}}"
+      variants=$ctrl.component.variants
+      type="{{$ctrl.type.type}}"
+      schema=$ctrl.component.schema
+      isolated="{{$ctrl.isolated}}"
+    ></sg-component-detail>
   `
 };
 

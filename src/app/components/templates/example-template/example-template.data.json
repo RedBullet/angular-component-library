@@ -1,6 +1,8 @@
-{
-  "variants": {
-    "base": {
+[
+  {
+    "name": "base",
+    "description": "Just the base data",
+    "data": {
       "navBarItems": [
         {
           "url": "#",
@@ -31,5 +33,40 @@
       ],
       "alertContent": "Some alerty content"
     }
+  },
+  {
+    "name": "variation1",
+    "description": "Some other data",
+    "data": {
+      "navBarItems": [
+        {
+          "url": "#",
+          "title": "Nav item"
+        },
+        {
+          "url": "#",
+          "title": "Nav item"
+        },
+        {
+          "url": "#",
+          "title": "Nav item"
+        }
+      ],
+      "listInfoItems": [
+        {
+          "label": "Item label",
+          "value": "Item value"
+        },
+        {
+          "label": "Item label",
+          "value": "Item value"
+        },
+        {
+          "label": "Item label",
+          "value": "Item value"
+        }
+      ],
+      "alertContent": "Some alerty content"
+    }
   }
-}
+]

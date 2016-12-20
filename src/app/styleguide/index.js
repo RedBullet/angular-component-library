@@ -11,6 +11,8 @@ import Nav from './common/nav';
 import Tabs from './common/tabs';
 import All from './common/all';
 import Single from './common/single';
+import Variants from './common/variants';
+import Variant from './common/variant';
 
 const Styleguide = angular
   .module('styleguide', [
@@ -23,6 +25,8 @@ const Styleguide = angular
     ComponentDetail,
     All,
     Single,
+    Variants,
+    Variant,
   ])
   .component('styleguide', StyleguideComponent)
   .service('StyleguideService', StyleguideService)

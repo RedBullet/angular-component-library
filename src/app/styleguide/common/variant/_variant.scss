@@ -1,0 +1,93 @@
+.sg-variant {
+  color: $body-color;
+  margin-bottom: $spacing-vertical-lg;
+  overflow: auto;
+
+  + .sg-variant {
+    margin-top: $spacing-vertical-lg;
+  }
+
+  &__heading {
+    color: $heading-color;
+    font-family: $heading-font-family;
+    font-size: 1.25em;
+    font-weight: $heading-font-weight;
+    margin: 0 0 $spacing-vertical;
+    text-transform: capitalize;
+  }
+
+  &__error {
+    background: $sg-variant-error-background;
+    font-family: $body-font-family;
+    padding: $spacing-vertical $spacing-horizontal;
+
+    &-title {
+      font-family: $heading-font-family;
+      font-size: 1em;
+      font-weight: $heading-font-weight;
+      line-height: $line-height;
+      margin: 0;
+      padding: 0;
+    }
+
+    &-text {
+      line-height: $line-height;
+      margin: 0 0 $spacing-vertical;
+      padding: 0;
+    }
+
+    &-list {
+      margin: $spacing-vertical 0 0;
+      padding: 0 0 0 $spacing-horizontal;
+    }
+
+    &-item {
+      + .sg-variant__error-item {
+        margin-top: $spacing-vertical-sm;
+      }
+
+      &-title {
+        font-family: $heading-font-family;
+        font-size: 1em;
+        font-weight: $heading-font-weight;
+        line-height: $line-height;
+        margin: 0;
+        padding: 0;
+      }
+
+      &-text {
+        line-height: $line-height;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  &__component {
+    background: $sg-variant-background;
+    border: $sg-variant-border;
+    padding: $spacing-vertical-lg $spacing-horizontal-lg;
+  }
+
+  &__code {
+    border: $sg-variant-border;
+
+    code,
+    pre {
+      margin: 0;
+    }
+
+    .hljs {
+      padding: $spacing-vertical-lg $spacing-horizontal-lg;
+    }
+  }
+
+  &__trigger {
+    color: inherit;
+    display: block;
+    float: right;
+    margin-right: $spacing-horizontal-sm;
+    padding: $spacing-vertical-sm $spacing-horizontal-sm;
+    text-decoration: none;
+  }
+}

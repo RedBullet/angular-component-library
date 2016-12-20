@@ -30,32 +30,23 @@ function mapComponents(component, type) {
   return {
     name: name,
     docs: createTemplateFromMarkdown(`${path}/Readme.md`, component, type),
-    schema: getSchema(`${path}/${component}.schema.json`),
+    schema: getJson(`${path}/${component}.schema.json`),
+    variants: getVariants(getJson(`${path}/${component}.data.json`), component, type),
   };
 }
 
-function getSchema(src) {
-  let file;
-  let json;
+function getJson(src) {
+  const file = getFile(src);
 
-  try {
-    file = fs.readFileSync(src, 'utf8');
-    json = JSON.parse(file); // eslint-disable-line angular/json-functions
-  } catch (err) {
-    //
+  if (file) {
+    return JSON.parse(file); // eslint-disable-line angular/json-functions
   }
 
-  return (json) ? json : undefined;
+  return undefined;
 }
 
 function createTemplateFromMarkdown(src, component, type) {
-  let file;
-
-  try {
-    file = fs.readFileSync(src, 'utf8');
-  } catch (err) {
-    //
-  }
+  const file = getFile(src);
 
   if (file) {
     const html = marked(file);
@@ -69,6 +60,56 @@ function createTemplateFromMarkdown(src, component, type) {
   }
 
   return undefined;
+}
+
+function getComponentMarkup(variation, component, type) {
+  return `<${component}${createVariationAttributes(variation.data)}>${variation.content ? variation.content : ''}</${component}>`;
+}
+
+function getVariants(variants, component, type) {
+  if (!variants) {
+    return [];
+  }
+
+  return variants.map((variant) => {
+    const html = getComponentMarkup(variant, component);
+    const templateSrc = `${type}.${component}.${variant.name}.html`;
+    const dir = `${config.paths.dist}/docs/templates`;
+
+    createDirIfNotExist(dir);
+    fs.writeFileSync(`${dir}/${templateSrc}`, html);
+
+    return Object.assign(variant, {
+      markup: html,
+      template: `docs/templates/${templateSrc}`
+    });
+  });
+}
+
+function createVariationAttributes(data) {
+  let attributes = '';
+
+  for (let key in data) {
+    if (typeof data[key] !== 'string') {
+      attributes += ` ${s(key).dasherize().value()}=$ctrl.data.${key}`;
+    } else {
+      attributes += ` ${s(key).dasherize().value()}="{{$ctrl.data.${key}}}"`;
+    }
+  }
+
+  return attributes;
+}
+
+function getFile(src) {
+  let file;
+
+  try {
+    file = fs.readFileSync(src, 'utf8');
+  } catch (err) {
+    //
+  }
+
+  return file;
 }
 
 function createDirIfNotExist(path) {

@@ -13,6 +13,7 @@ const ComponentDetailComponent = {
   bindings: {
     name: '@',
     docs: '@',
+    variants: '<',
     schema: '<',
     type: '@',
     isolated: '@',
@@ -26,9 +27,18 @@ const ComponentDetailComponent = {
           <h2 class="sg-component-detail__subtitle">{{$ctrl.type}}</h2>
           <h1 class="sg-component-detail__title">{{$ctrl.name}}</h1>
         </header>
-        <div class="sg-component-detail__docs" ng-include=$ctrl.docs ng-if="$ctrl.docs"></div>
+
+        <div class="sg-component-detail__variants" ng-if="$ctrl.variants.length > 0">
+          <sg-variants variants=$ctrl.variants></sg-variants>
+        </div>
+
         <div class="sg-component-detail__properties" ng-if="$ctrl.schema">
           <sg-properties properties=$ctrl.schema.properties required=$ctrl.schema.required></sg-properties>
+        </div>
+
+        <div class="sg-component-detail__docs" ng-if="$ctrl.docs">
+          <h3>Documentation</h3>
+          <div ng-include=$ctrl.docs></div>
         </div>
       </div>
 

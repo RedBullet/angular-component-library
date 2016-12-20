@@ -1,0 +1,16 @@
+[
+  {
+    "name": "base",
+    "data": {
+      "name": "Admiral",
+      "src": "http://placehold.it/200x75"
+    }
+  },
+  {
+    "name": "variation1",
+    "data": {
+      "name": "Elephant",
+      "src": "http://placehold.it/200x75"
+    }
+  }
+]
